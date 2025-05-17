@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import { Box, rgbToHex } from "@mui/material";
+import { Box } from "@mui/material";
 
 function App() {
   const [price, setPrice] = useState<number | null>(null);
   const [lastUpdated, setLastUpdated] = useState<string | null>(null);
-  const [error, setError] = useState(null);
+  const [error] = useState(null);
 
   useEffect(() => {
     const socket = new WebSocket(
@@ -37,7 +37,7 @@ function App() {
   const priceUpper = (price * 1.05).toFixed(4);
 
   return (
-    <Box sx={{ textAlign: "center", mt: 5,backgroundColor: "white" }}>
+    <Box sx={{ textAlign: "center", mt: 5, backgroundColor: "white" }}>
       {lastUpdated && (
         <Box sx={{ fontSize: "16px", mt: 1, color: "gray" }}>
           อัปเดตล่าสุด: {lastUpdated}
