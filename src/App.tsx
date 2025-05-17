@@ -37,7 +37,7 @@ function App() {
   const priceUpper = (price * 1.05).toFixed(4);
 
   return (
-    <Box sx={{ textAlign: "center", mt: 5,backgroundColor: "wite" }}>
+    <Box sx={{ textAlign: "center", mt: 5,backgroundColor: "white" }}>
       {lastUpdated && (
         <Box sx={{ fontSize: "16px", mt: 1, color: "gray" }}>
           อัปเดตล่าสุด: {lastUpdated}
