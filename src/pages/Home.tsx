@@ -56,8 +56,6 @@ function Home() {
           </Box>
         )}
 
-      
-
         <hr />
         <Box>
           ราคาต่ำสุดที่ควรตั้ง (Lower Price): <p>${priceLower}</p>

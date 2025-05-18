@@ -1,14 +1,7 @@
-import { useState } from "react";
-import {
-  Box,
-  Button,
-  ClickAwayListener,
-  Input,
-  Tooltip,
-  Typography,
-} from "@mui/material";
+import { Box, Button, Input, Typography } from "@mui/material";
 import ResponsiveAppBar from "../components/ResponsiveAppBar";
 import "./Page.css"; // Import your CSS file
+import { useState } from "react";
 
 function Dividend() {
   const [shares, setShares] = useState<number | "">(""); // จำนวนหุ้น
@@ -32,7 +25,7 @@ function Dividend() {
     <>
       <ResponsiveAppBar />
       <Box className="marquee-container" sx={{ mt: 0 }}>
-        <Box className="marquee-content" sx={{ mt: 1, color: "blue" }}>  
+        <Box className="marquee-content" sx={{ mt: 1, color: "blue" }}>
           TISCO จ่ายปันผลเดือน เม.ย. และ ก.ย.
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
           &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -107,29 +100,6 @@ function Dividend() {
           </Box>
         )}
       </Box>
-      {/* 
-      <ClickAwayListener onClickAway={handleTooltipClose}>
-        <div>
-          <Tooltip
-            onClose={handleTooltipClose}
-            open={open}
-            disableFocusListener
-            disableHoverListener
-            disableTouchListener
-            title="tisco จ่ายปันผล 2 ครั้งต่อปี โดยจะจ่ายในเดือนเมษายน และเดือนกันยายนของทุกปี"
-            slotProps={{
-              popper: {
-                disablePortal: true,
-              },
-            }}
-          >
-            <Button onClick={handleTooltipOpen}>
-              {" "}
-              กดเพื่อดูรายละเอียดการจ่ายปันผล
-            </Button>
-          </Tooltip>
-        </div>
-      </ClickAwayListener> */}
     </>
   );
 }
